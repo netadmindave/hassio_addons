@@ -1,0 +1,26 @@
+{
+  "name": "Portainer Agent",
+  "version": "dev",
+  "slug": "portainer_agent",
+  "description": "Manage your Docker environment with ease",
+  "url": "https://github.com/netadmindave/hassio_addons",
+  "advanced": true,
+  "ingress": true,
+  "ingress_stream": true,
+  "startup": "services",
+  "panel_icon": "mdi:docker",
+  "arch": ["aarch64", "amd64", "armhf", "armv7"],
+  "init": false,
+  "ports": {
+    "9001/tcp": null
+  },
+  "ports_description": {
+    "9001/tcp": "Agent Port"
+  },
+  "hassio_api": true,
+  "docker_api": true,
+  "schema": {
+    "log_level": "list(trace|debug|info|notice|warning|error|fatal)?",
+    "agent_secret": "str?"
+  }
+}
